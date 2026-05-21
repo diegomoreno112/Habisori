@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habisori - Habitar y Saborear</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;500;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1b3834',
+                        'brand-green': '#2e6f4e',
+                        'brand-salmon': '#de795d',
+                        'brand-cream': '#f5f2ec',
+                        'brand-gray': '#d9d9d9',
+                        'logo-color': '#518b70',
+                        'brand-terracotta': '#a16b3f',
+                        'brand-leaf': '#9eb5a3'
+                    },
+                    fontFamily: {
+                        'display': ['poppins', 'sans-serif'],
+                        'body': ['poppins', 'sans-serif'],
+                        'logo': ['"Cinzel Decorative"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-body antialiased text-gray-800">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="bg-brand-dark w-full z-50 sticky top-0 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" data-target="inicio" class="nav-btn inline-block">
+                        <img src="imgenes/logoblanco-100.png" alt="Habisori Logo"
+                            class="h-10 md:h-12 w-auto hover:opacity-80 transition-opacity">
+                    </a>
+                </div>
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <button data-target="empatizar"
+                        class="nav-btn text-white hover:text-brand-salmon font-display font-bold text-sm tracking-wide transition-colors">EMPATIZAR</button>
+                    <button data-target="definir"
+                        class="nav-btn text-white hover:text-brand-salmon font-display font-bold text-sm tracking-wide transition-colors">DEFINIR</button>
+                    <button data-target="idear"
+                        class="nav-btn text-white hover:text-brand-salmon font-display font-bold text-sm tracking-wide transition-colors">IDEAR</button>
+                    <button data-target="prototipar"
+                        class="nav-btn text-white hover:text-brand-salmon font-display font-bold text-sm tracking-wide transition-colors">PROTOTIPAR</button>
+                    <button
+                        class="bg-brand-green text-white px-5 py-2 rounded font-display font-bold text-sm tracking-wide hover:bg-opacity-90 transition-all shadow-md">ENLACES</button>
+                </div>
+                <!-- Botón de menú móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-salmon focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-brand-dark pb-4 px-4 shadow-lg absolute w-full border-t border-gray-700">
+            <div class="flex flex-col space-y-4 pt-4">
+                <button data-target="empatizar"
+                    class="nav-btn-mobile text-left text-white hover:text-brand-salmon font-display font-bold text-sm">EMPATIZAR</button>
+                <button data-target="definir"
+                    class="nav-btn-mobile text-left text-white hover:text-brand-salmon font-display font-bold text-sm">DEFINIR</button>
+                <button data-target="idear"
+                    class="nav-btn-mobile text-left text-white hover:text-brand-salmon font-display font-bold text-sm">IDEAR</button>
+                <button data-target="prototipar"
+                    class="nav-btn-mobile text-left text-white hover:text-brand-salmon font-display font-bold text-sm">PROTOTIPAR</button>
+                <button
+                    class="bg-brand-green text-white px-4 py-2 rounded font-display font-bold text-sm w-max text-left">ENLACES</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL DE PESTAÑAS -->
+    <main id="main-content">
+
+        <!-- ========================================== -->
+        <!-- PESTAÑA: INICIO -->
+        <!-- ========================================== -->
+        <section id="inicio" class="tab-content active tab-active-animation">
+            <header class="relative h-[550px] lg:h-[650px] w-full bg-cover bg-center"
+                style="background-image:url(imgenes/patrimoniohome.jpg) ">
+                <div class="absolute inset-0 bg-black bg-opacity-50 hero-overlay"></div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
+                    <div class="max-w-2xl mt-10">
+                        <h1
+                            class="text-brand-salmon font-display font-black text-4xl md:text-5xl lg:text-5xl leading-tight mb-6 uppercase drop-shadow-lg">
+                            "Habitar y saborear el<br>barrio prado medellín"
+                        </h1>
+                        <p
+                            class="text-white text-base md:text-lg font-medium mb-8 leading-relaxed max-w-lg drop-shadow-md">
+                            habisori es un proyecto que busca resignificar la percepción del barrio prado medellín a
+                            través de experiencias que integran arquitectura, cultura y gastronomía.
+                        </p>
+                        <button data-target="empatizar"
+                            class="nav-btn inline-block bg-[#163026] text-white font-display font-bold text-sm px-6 py-3 rounded hover:bg-brand-green transition-colors shadow-lg">
+                            Explora el Proyecto
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="bg-brand-cream py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                        <h2 class="text-brand-dark font-display font-black text-3xl md:text-4xl mb-6">HABISORI</h2>
+                        <div class="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base text-justify">
+                            <p>HABISORI nace de la unión entre habitar y saborear, entendiendo el Barrio Prado Medellín
+                                como un territorio que puede volver a ser recorrido, vivido y experimentado desde la
+                                arquitectura, la cultura y la gastronomía.</p>
+                            <p>El proyecto busca visibilizar aquellos espacios del barrio que hoy ofrecen nuevas formas
+                                de habitar el patrimonio, reconociendo casas y lugares donde surgen experiencias
+                                culturales, artísticas y gastronómicas que resignifican el territorio.</p>
+                            <p>A través del análisis de distintas casas patrimoniales y sus transformaciones, HABISORI
+                                construye una narrativa visual y experiencial inspirada en elementos arquitectónicos del
+                                barrio como rejas, arcos, ventanas, cerámicas y detalles ornamentales.</p>
+                        </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-16 pb-12">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="imgenes/1 ILUSTRADA.png"
+                    alt="Ilustrada 1"
+                    class="flip-img">
+            </div>
+            <div class="flip-card-back">
+                <img src="imgenes/2 ILUSTRADA.png"
+                    alt="Ilustrada 2"
+                    class="flip-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="imgenes/3 ILUSTRADAS.png"
+                    alt="Ilustrada 3"
+                    class="flip-img">
+            </div>
+            <div class="flip-card-back">
+                <img src="imgenes/4 ILUSTRADA.png"
+                    alt="Ilustrada 4"
+                    class="flip-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="imgenes/5 ILUSTRADA.png"
+                    alt="Ilustrada 5"
+                    class="flip-img">
+            </div>
+            <div class="flip-card-back">
+                <img src="imgenes/6 ILUSTRADA.png"
+                    alt="Ilustrada 6"
+                    class="flip-img">
+            </div>
+        </div>
+    </div>
+
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PESTAÑA: EMPATIZAR -->
+        <!-- ========================================== -->
+        <section id="empatizar" class="tab-content bg-brand-cream pb-12">
+            <div class="pt-16 max-w-7xl mx-auto px-4 text-center">
+                <h2 class="text-brand-dark font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                    EMPATIZAR
+                </h2>
+                <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                </div>
+                <div class="text-left max-w-6xl mx-auto py-16 px-6">
+
+    <!-- TITULO -->
+    <h3 class="text-brand-dark font-display font-bold text-3xl md:text-4xl mb-10 leading-tight">
+        Investigación: problema, audiencia y contexto
+    </h3>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base text-gray-700 leading-relaxed">
+
+        <!-- COLUMNA 1 -->
+        <div class="space-y-6">
+
+            <div class="border-l-2 border-brand-green pl-5">
+                <p>
+                    El Barrio Prado Medellín, reconocido por su valor histórico y arquitectónico, ha atravesado diferentes transformaciones urbanas y sociales que han afectado la relación de las personas con el territorio. El abandono progresivo de muchas viviendas patrimoniales, el deterioro del espacio público, la inseguridad y la presencia de problemáticas sociales han contribuido al desgaste físico y social del barrio, debilitando la apropiación y permanencia dentro del sector.
+                </p>
+            </div>
+
+            <div class="border-l-2 border-brand-green pl-5">
+                <p>
+                    A pesar de estas problemáticas, Prado continúa conservando una importante riqueza cultural, arquitectónica y patrimonial. Actualmente, diferentes espacios culturales, gastronómicos y artísticos han comenzado a resignificar algunas casas patrimoniales mediante nuevas dinámicas que permiten recorrer y habitar el barrio desde otras experiencias.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLUMNA 2 -->
+        <div class="space-y-6">
+
+            <div class="border-l-2 border-brand-green pl-5">
+                <p>
+                    Sin embargo, muchas de estas propuestas aún se perciben poco visibles o desconectadas de la ciudadanía, generando que gran parte de las personas desconozcan lo que sucede dentro de estos espacios. Frente a este contexto, el proyecto identifica la oportunidad de acercar nuevamente a las personas al Barrio Prado Medellín mediante experiencias culturales, visuales y territoriales que permitan descubrir aquello que muchas veces permanece oculto detrás de sus fachadas.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                <p class="font-medium text-gray-800 leading-relaxed">
+                    Comprender Prado implicó reconocer que el patrimonio no solo se conserva observándolo, sino también recorriéndolo, habitándolo y permitiendo que nuevas experiencias continúen dando vida al territorio.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            </div>
+
+            <div class="bg-brand-dark py-24 text-white mt-16 relative overflow-hidden">
+
+    <!-- luces decorativas -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-brand-salmon/10 rounded-full blur-3xl"></div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- TITULO -->
+        <div class="mb-16">
+
+            <h3 class="text-brand-salmon font-display font-bold text-3xl md:text-4xl tracking-wide drop-shadow-lg">
+                Problemas vs. Oportunidades
+            </h3>
+
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-14">
+
+            <!-- IZQUIERDA -->
+            <div class="lg:col-span-7">
+
+                <!-- ENCABEZADOS -->
+                <div class="hidden md:grid grid-cols-2 gap-6 mb-6">
+
+                    <div class="text-center text-brand-salmon font-bold uppercase text-sm tracking-widest">
+                        Problemas
+                    </div>
+
+                    <div class="text-center text-brand-salmon font-bold uppercase text-sm tracking-widest">
+                        Oportunidades
+                    </div>
+
+                </div>
+
+                <!-- GRID -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- FILA 1 -->
+                    <div
+                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
+
+                        <span class="font-bold text-white text-base">
+                            percepción de inseguridad
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
+
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Transformar la percepción del Barrio Prado a través
+                            de experiencias inmersivas que integren arquitectura,
+                            cultura y gastronomía, incentivando su visita y
+                            reactivación urbana.
+                        </p>
+
+                    </div>
+
+                    <!-- FILA 2 -->
+                    <div
+                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
+
+                        <span class="font-bold text-white text-base">
+                            Alto costo de adecuación
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
+
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Reactivar casas patrimoniales del Barrio Prado
+                            mediante su transformación en espacios habitados
+                            que integren gastronomía, cultura y arquitectura.
+                        </p>
+
+                    </div>
+
+                    <!-- FILA 3 -->
+                    <div
+                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
+
+                        <span class="font-bold text-white text-base">
+                            Riesgo de gentrificación
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
+
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Dinamizar el Barrio Prado mediante eventos
+                            temporales que integren cultura, gastronomía
+                            y arquitectura.
+                        </p>
+
+                    </div>
+
+                    <!-- FILA DESTACADA -->
+                    <div
+                        class="bg-brand-salmon border border-brand-salmon p-6 rounded-2xl flex items-center shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+
+                        <span class="font-bold text-white text-base">
+                            Poco interés en el barrio
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="bg-brand-salmon border border-brand-salmon p-6 rounded-2xl flex items-center shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+
+                        <p class="text-sm text-white/95 leading-relaxed">
+                            Visibilizar y resignificar el Barrio Prado a través
+                            de un producto editorial que integre arquitectura,
+                            cultura y gastronomía desde una narrativa visual
+                            y experiencial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DERECHA -->
+            <div
+                class="lg:col-span-5 flex flex-col justify-center space-y-6 text-sm text-gray-300 leading-relaxed text-justify bg-white/5 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/10 transition-all duration-500 hover:shadow-2xl">
+
+                <p>
+                    A partir del análisis del contexto y de los hallazgos
+                    obtenidos durante la investigación, se identificaron
+                    diferentes problemáticas presentes en el Barrio Prado
+                    Medellín, como la inseguridad, el deterioro urbano,
+                    el riesgo de gentrificación y el poco interés de la
+                    ciudadanía por recorrer y habitar el sector.
+                </p>
+
+                <p>
+                    Dentro de estas problemáticas, los cuadros resaltados
+                    en color rosa corresponden al enfoque principal
+                    seleccionado para el proyecto, centrado en el poco
+                    interés hacia el barrio y la desconexión existente
+                    entre las personas y las experiencias culturales,
+                    gastronómicas y patrimoniales.
+                </p>
+
+                <p>
+                    Como respuesta comenzaron a desarrollarse diferentes
+                    propuestas de diseño y elementos visuales inspirados
+                    en la arquitectura patrimonial de Prado, buscando
+                    construir una experiencia que conectara la
+                    arquitectura, la cultura y la gastronomía como nuevas
+                    formas de habitar el territorio.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- Imágenes: Clasificación y Árbol de problemas -->
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pb-16 space-y-24">
+
+                <!-- Clasificación de problemas u oportunidades -->
+                <!-- Clasificación de problemas u oportunidades -->
+<!-- CLASIFICACIÓN -->
+<div class="image-zoom rounded-2xl border-2 border-[#a16b3f] bg-white shadow-xl mb-20 p-6 md:p-8">
+
+    <img 
+        src="imgenes/clasificacióno-8.png"
+        alt="Clasificación de problemas u oportunidades"
+        class="w-full h-auto object-contain transition-transform duration-700 hover:scale-110">
+
+    <div class="image-caption pt-8">
+        <h4 class="text-2xl font-bold text-[#1f2d2b] mb-2">
+            Clasificación
+        </h4>
+
+        <p class="text-base text-gray-600">
+            Problemas y oportunidades del territorio
+        </p>
+    </div>
+</div>
+
+<!-- ÁRBOL DE PROBLEMAS -->
+<div class="image-zoom rounded-2xl border-2 border-[#a16b3f] bg-white shadow-xl p-6 md:p-8">
+
+    <img 
+        src="imgenes/arbol-8.png"
+        alt="Árbol de problemas"
+        class="w-full h-auto object-contain transition-transform duration-700 hover:scale-110">
+
+    <div class="image-caption pt-8">
+
+        <h4 class="text-2xl font-bold text-[#1f2d2b] mb-2">
+            Árbol de problemas
+        </h4>
+
+        <p class="text-base text-gray-600">
+            Relaciones entre causas y consecuencias
+        </p>
+
+    </div>
+</div>
+</div>
+
+            <div class="bg-brand-terracotta py-16 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h3 class="font-display font-bold text-3xl mb-12">Entrevista</h3>
+
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mb-12">
+                        <!-- Imagen Arco 1: patrimonio.jpg -->
+                        <!-- Imagen Arco 1 -->
+<div class="image-rotate w-72 md:w-80 lg:w-96 h-96 md:h-[28rem] lg:h-[32rem] rounded-t-full shadow-2xl border-4 border-brand-terracotta bg-white">    <img 
+        src="imgenes/patrimonio.jpg"
+        alt="Casa Patrimonio"
+        class="w-full h-full object-cover">
+
+    <div class="image-caption">
+        <h4 class="text-lg font-bold">Patrimonio</h4>
+        <p class="text-sm">Arquitectura histórica de Prado</p>
+    </div>
+</div>
+
+<!-- Imagen Arco 2 -->
+<div class="image-rotate w-72 md:w-80 lg:w-96 h-96 md:h-[28rem] lg:h-[32rem] rounded-t-full shadow-2xl border-4 border-brand-terracotta bg-white">    <img 
+        src="imgenes/jorge.png"
+        alt="Entrevista Jorge"
+        class="w-full h-full object-cover">
+
+    <div class="image-caption">
+        <h4 class="text-lg font-bold">Entrevista</h4>
+        <p class="text-sm">Historias y experiencias del barrio</p>
+    </div>
+</div>
+                    </div>
+
+                    <div class="max-w-5xl mx-auto space-y-6 text-sm md:text-base text-white/90 leading-relaxed">
+
+    <!-- IDEA 1 -->
+    <div class="border-l-2 border-white/20 pl-5">
+        <p>
+            Con el propósito de comprender las dinámicas y formas de habitar el Barrio Prado Medellín, se realizaron entrevistas a cinco personas con diferentes relaciones frente al territorio, entre ellas residentes, trabajadores del sector, encargados de espacios patrimoniales y personas externas que conocen el barrio desde la experiencia o la percepción construida alrededor de él.
+        </p>
+        <p class="mt-3">
+            Estas conversaciones permitieron reconocer distintas miradas sobre la transformación de Prado, sus problemáticas actuales y las nuevas dinámicas culturales que hoy continúan dando vida al sector.
+        </p>
+    </div>
+
+    <!-- IDEA 2 -->
+    <div class="border-l-2 border-white/20 pl-5">
+        <p>
+            Uno de los hallazgos más importantes surgió a partir del relato del encargado de Casa Prado Patrimonio, quien destacó cómo muchas personas observan las fachadas del barrio desde afuera sin conocer las experiencias culturales y dinámicas que actualmente existen dentro de estos espacios.
+        </p>
+        <p class="mt-3">
+            Asimismo, resaltó la importancia de conservar las viviendas patrimoniales permitiendo que continúen siendo habitadas y adaptadas a nuevos usos culturales y gastronómicos.
+        </p>
+        <p class="mt-3">
+            Por otro lado, Don Jorge permitió comprender Prado desde una mirada más cotidiana y cercana a la transformación del barrio, resaltando el valor de los materiales, las rejas y los detalles arquitectónicos presentes en muchas de las casas tradicionales.
+        </p>
+    </div>
+
+    <!-- IDEA 3 -->
+    <div class="border-l-2 border-white/20 pl-5">
+        <p>
+            Las entrevistas realizadas a jóvenes y visitantes evidenciaron una percepción negativa marcada por la inseguridad y la desinformación frente al barrio, generando una desconexión con los espacios culturales, gastronómicos y patrimoniales que actualmente buscan resignificar Prado desde nuevas formas de habitarlo.
+        </p>
+        <p class="mt-3">
+            Esto permitió reconocer que gran parte de la riqueza del sector permanece oculta detrás de sus fachadas, revelando una oportunidad para construir propuestas capaces de invitar a las personas a entrar, recorrer y redescubrir el territorio desde la experiencia y la permanencia.
+        </p>
+    </div>
+
+</div>
+                </div>
+            </div>
+
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  
+  <h3 class="text-brand-dark font-display font-bold text-3xl mb-12">
+    Mapa de empatía
+  </h3>
+
+  <div class="flex flex-col lg:flex-row gap-12 items-start">
+
+    <!-- TEXTO -->
+    <div class="w-full lg:w-2/5 space-y-8 text-sm text-gray-700 leading-relaxed">
+
+      <div>
+        <h4 class="font-semibold text-gray-900 text-base mb-2">
+          Percepción del Barrio Prado
+        </h4>
+        <p class="text-justify">
+          El mapa de empatía permitió comprender cómo diferentes personas perciben y se relacionan con el Barrio Prado Medellín desde experiencias, emociones y necesidades distintas.
+          Mientras algunos actores reconocen su valor <span class="font-medium text-gray-900">patrimonial, arquitectónico y cultural</span>, muchas personas externas aún lo asocian con la inseguridad, el deterioro y el miedo.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-gray-900 text-base mb-2">
+          Tensiones en la percepción
+        </h4>
+        <p class="text-justify">
+          Esta dualidad genera una barrera que limita el interés por recorrerlo y habitarlo, afectando la forma en que el barrio es imaginado desde fuera.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-gray-900 text-base mb-2">
+          Oportunidades de conexión
+        </h4>
+        <p class="text-justify">
+          También se evidenció curiosidad por descubrir Prado y sus nuevas dinámicas culturales y gastronómicas, pero existe una falta de información y visibilidad sobre los espacios que buscan resignificar el territorio.
+          Esto sugiere que el usuario no necesita solo información, sino <span class="font-medium text-gray-900">experiencias que generen cercanía, permanencia y conexión</span> con el barrio.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="w-full lg:w-3/5 flex justify-center">
+
+      <div class="image-zoom w-full max-w-3xl shadow-2xl rounded-3xl border border-[#a16b3f] bg-white p-6 md:p-8">
+
+        <img 
+          src="imgenes/mapaempatia.jpg"
+          alt="Mapa de Empatía"
+          class="w-full h-auto object-contain transition-transform duration-700 hover:scale-105">
+
+        <div class="pt-6 text-center">
+
+          <h4 class="text-xl font-bold text-[#1f2d2b] mb-1">
+            Mapa de Empatía
+          </h4>
+
+          <p class="text-sm text-gray-600">
+            Análisis de emociones, pensamientos y experiencias
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PESTAÑA: IDEAR -->
+        <!-- ========================================== -->
+        <section id="idear" class="tab-content bg-brand-cream pb-12">
+            <div class="pt-20 max-w-7xl mx-auto px-4 text-center">
+                <h2
+                    class="text-brand-terracotta font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                    IDEAR
+                </h2>
+                <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+    <!-- Encabezado -->
+    <div class="max-w-3xl mb-14">
+
+        <span class="text-sm uppercase tracking-[0.2em] text-[#a16b3f] font-semibold">
+            Exploración visual
+        </span>
+
+        <h3 class="text-brand-dark font-display font-bold text-3xl md:text-5xl mt-3 mb-6 leading-tight">
+            Bocetos
+        </h3>
+
+        <p class="text-sm md:text-base text-gray-600 leading-relaxed text-justify">
+            Durante la fase de bocetación se exploraron distintas propuestas visuales para construir la identidad de la marca, tomando como inspiración elementos arquitectónicos presentes en las casas patrimoniales del Barrio Prado Medellín, como arcos, puertas, rejas y ornamentaciones.
+            Asimismo, se utilizaron referencias del <span class="font-medium text-gray-900">Art Nouveau</span>, <span class="font-medium text-gray-900">Art Déco</span> y la arquitectura republicana observada durante la investigación de campo, permitiendo desarrollar una identidad visual conectada con el patrimonio del barrio desde una mirada contemporánea y experiencial.
+        </p>
+
+    </div>
+               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-20">
+
+    <div class="flex flex-col gap-4">
+    <img src="imgenes/bocetodani.jpeg" alt="Boceto logo 1"
+        class="collage-img h-48 object-cover">
+
+    <img src="imgenes/bocetologod.jpeg" alt="Boceto logo 2"
+        class="collage-img h-64 object-cover">
+</div>
+
+<div class="flex flex-col gap-4 md:mt-10">
+    <img src="imgenes/boetologo.jpeg" alt="Boceto estructura"
+        class="collage-img h-32 object-cover">
+
+    <img src="imgenes/bocetoexh.jpeg" alt="Boceto libreta"
+        class="collage-img h-80 object-cover">
+</div>
+
+<div class="flex flex-col gap-4 md:-mt-6">
+    <img src="imgenes/bocetoexhi.jpeg" alt="Boceto mapas"
+        class="collage-img h-[29rem] object-cover">
+</div>
+</div>
+            </div>
+
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+    <!-- Encabezado -->
+    <div class="max-w-3xl mb-14">
+
+        <span class="text-sm uppercase tracking-[0.2em] text-brand-salmon font-semibold">
+            Validación conceptual
+        </span>
+
+        <h3 class="text-brand-dark font-display font-bold text-3xl md:text-5xl mt-3">
+            Evaluación de criterios
+        </h3>
+
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+        <!-- CARD -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:-translate-y-1 transition duration-300">
+
+            <div class="mb-6">
+                <span class="text-xs uppercase tracking-[0.18em] text-brand-salmon font-bold">
+                    Base conceptual
+                </span>
+
+                <h4 class="text-xl font-bold text-brand-dark mt-2">
+                    Requerimientos
+                </h4>
+            </div>
+
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    E/C — Representar el patrimonio y la identidad del barrio.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    E/C — Generar una experiencia cercana y habitable.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    F/O — Funcionalidad y experiencia de uso.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    T/P — Producción y viabilidad.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:-translate-y-1 transition duration-300">
+
+            <div class="mb-6">
+                <span class="text-xs uppercase tracking-[0.18em] text-brand-salmon font-bold">
+                    Identidad visual
+                </span>
+
+                <h4 class="text-xl font-bold text-brand-dark mt-2">
+                    Propuesta Logo
+                </h4>
+            </div>
+
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Inspirado en arcos, rejas y elementos patrimoniales de Prado.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Transmite la idea de entrar, descubrir y recorrer el barrio.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Adaptable a distintas piezas gráficas y editoriales.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Simplificación de detalles para mejorar reproducción gráfica.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:-translate-y-1 transition duration-300">
+
+            <div class="mb-6">
+                <span class="text-xs uppercase tracking-[0.18em] text-brand-salmon font-bold">
+                    Experiencia interactiva
+                </span>
+
+                <h4 class="text-xl font-bold text-brand-dark mt-2">
+                    Caja Pop-Up
+                </h4>
+            </div>
+
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Retoma formas arquitectónicas del barrio.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Propone una experiencia inmersiva e interactiva.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Facilita la interacción con el kit.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Ajustes estructurales para producción.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:-translate-y-1 transition duration-300">
+
+            <div class="mb-6">
+                <span class="text-xs uppercase tracking-[0.18em] text-brand-salmon font-bold">
+                    Narrativa visual
+                </span>
+
+                <h4 class="text-xl font-bold text-brand-dark mt-2">
+                    Carrusel de fotos
+                </h4>
+            </div>
+
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Integra elementos inspirados en fachadas y recorridos.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Construye una narrativa visual del territorio.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Facilita el recorrido y la interacción visual.
+                </div>
+
+                <div class="border-l-2 border-brand-green pl-4">
+                    Optimización para impresión y doble funcionalidad.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+           <div class="bg-brand-dark py-24 mt-20 text-white relative overflow-hidden">
+
+    <!-- decorativo -->
+    <div class="absolute top-0 right-0 w-72 h-72 bg-brand-terracotta/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- encabezado -->
+        <div class="max-w-3xl mb-16">
+
+            <span class="text-xs uppercase tracking-[0.25em] text-brand-salmon font-semibold">
+                Retroalimentación del proceso
+            </span>
+
+            <h4 class="font-display font-bold text-3xl md:text-5xl mt-4 leading-tight">
+                Malla receptora
+            </h4>
+
+        </div>
+
+        <!-- contenido -->
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-10 items-start">
+
+            <!-- cards -->
+            <div class="xl:col-span-2 grid sm:grid-cols-2 gap-6">
+
+                <!-- card -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-sm">
+
+                    <h5 class="font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-3">
+                        <span class="text-xl text-brand-salmon">+</span>
+                        Qué es interesante
+                    </h5>
+
+                    <ul class="space-y-3 text-sm text-gray-300 leading-relaxed">
+                        <li>Uso de arquitectura patrimonial como sistema gráfico.</li>
+                        <li>Integración entre experiencia y editorial.</li>
+                        <li>Empaque con doble función.</li>
+                        <li>Inspiración en elementos reales del barrio.</li>
+                    </ul>
+
+                </div>
+
+                <!-- card -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-sm">
+
+                    <h5 class="font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-3">
+                        <span class="text-xl text-brand-salmon">Δ</span>
+                        Críticas constructivas
+                    </h5>
+
+                    <ul class="space-y-3 text-sm text-gray-300 leading-relaxed">
+                        <li>Algunos elementos visuales estaban sobrecargados.</li>
+                        <li>Era necesario simplificar ciertas formas.</li>
+                        <li>Algunos tamaños afectaban la funcionalidad.</li>
+                        <li>Algunas estructuras eran difíciles de producir.</li>
+                    </ul>
+
+                </div>
+
+                <!-- card -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-sm">
+
+                    <h5 class="font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-3">
+                        <span class="text-xl text-brand-salmon">?</span>
+                        Preguntas y dudas
+                    </h5>
+
+                    <ul class="space-y-3 text-sm text-gray-300 leading-relaxed">
+                        <li>¿Cómo equilibrar lo vintage y lo contemporáneo?</li>
+                        <li>¿Qué formato genera una experiencia más habitable?</li>
+                        <li>¿Cómo organizar mejor las piezas?</li>
+                        <li>¿Qué elementos podían tener doble uso?</li>
+                        <li>¿Cómo aumentar el tiempo de permanencia del usuario?</li>
+                    </ul>
+
+                </div>
+
+                <!-- card -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-sm">
+
+                    <h5 class="font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-3">
+                        <span class="text-xl text-brand-salmon">💡</span>
+                        Ideas nuevas
+                    </h5>
+
+                    <ul class="space-y-3 text-sm text-gray-300 leading-relaxed">
+                        <li>Carrusel de doble uso.</li>
+                        <li>Mejor organización interna del kit.</li>
+                        <li>Sistema editorial interactivo.</li>
+                        <li>Elementos desplegables inspirados en fachadas.</li>
+                        <li>Patrones arquitectónicos adaptados a piezas gráficas.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- bloque lateral -->
+            <div class="bg-brand-terracotta rounded-[2rem] p-8 shadow-2xl h-full flex items-center">
+
+                <p class="text-sm md:text-base text-white/90 leading-relaxed">
+                    La evaluación de criterios permitió analizar las propuestas desde dimensiones estético-comunicativas, funcional-operativas y tecno-productivas.
+                    En los bocetos de identidad visual se evaluaron aspectos como narrativa gráfica, representación patrimonial, legibilidad y aplicación visual, mientras que en las propuestas editoriales y de empaque se revisaron elementos relacionados con organización, experiencia de uso, interacción y viabilidad estructural.
+                    Este proceso permitió refinar las ideas y consolidar una propuesta más coherente con el concepto de <span class="font-semibold">“Habitar y Saborear”</span>.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PESTAÑA: DEFINIR -->
+        <!-- ========================================== -->
+        <section id="definir" class="tab-content bg-brand-cream pb-12">
+            <div class="pt-20 max-w-7xl mx-auto px-4 text-center">
+                <h2
+                    class="text-brand-salmon font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                    DEFINIR
+                </h2>
+                <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="bg-brand-green py-16 text-white">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- TITULO -->
+        <h3 class="font-display font-bold text-4xl md:text-5xl mb-10">
+            Objetivos de diseño
+        </h3>
+
+        <!-- CONTENIDO -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- GENERAL -->
+            <div class="lg:col-span-1 bg-white/5 border border-white/10 rounded-2xl p-6">
+
+                <p class="uppercase text-xs tracking-[0.2em] text-brand-salmon font-bold mb-3">
+                    Objetivo general
+                </p>
+
+                <div class="w-12 h-[2px] bg-brand-salmon mb-4"></div>
+
+                <p class="text-sm md:text-base leading-normal text-white/90">
+                    Diseñar un producto editorial y experiencial que permita resignificar la percepción del
+                    Barrio Prado mediante la integración de la arquitectura, la cultura y la gastronomía,
+                    promoviendo su apropiación y habitabilidad por parte del público.
+                </p>
+
+            </div>
+
+            <!-- ESPECIFICOS -->
+            <div class="lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6">
+
+                <p class="uppercase text-xs tracking-[0.2em] text-brand-salmon font-bold mb-3">
+                    Objetivos específicos
+                </p>
+
+                <div class="w-12 h-[2px] bg-brand-salmon mb-5"></div>
+
+                <div class="space-y-4">
+
+                    <p class="text-sm md:text-base leading-normal text-white/85 border-l border-white/15 pl-4">
+                        Identificar las percepciones, problemáticas y dinámicas del Barrio Prado a partir del análisis de contexto y entrevistas.
+                    </p>
+
+                    <p class="text-sm md:text-base leading-normal text-white/85 border-l border-white/15 pl-4">
+                        Analizar la interacción entre arquitectura, cultura y gastronomía como ejes de resignificación del territorio.
+                    </p>
+
+                    <p class="text-sm md:text-base leading-normal text-white/85 border-l border-white/15 pl-4">
+                        Definir el concepto como eje articulador del proyecto y traducirlo en un producto tangible.
+                    </p>
+
+                    <p class="text-sm md:text-base leading-normal text-white/85 border-l border-white/15 pl-4">
+                        Desarrollar el sistema gráfico del proyecto incluyendo identidad visual, lenguaje editorial y recursos gráficos.
+                    </p>
+
+                    <p class="text-sm md:text-base leading-normal text-white/85 border-l border-white/15 pl-4">
+                        Evaluar el producto con usuarios potenciales para medir su comprensión, atractivo y capacidad de transformar la percepción del barrio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative overflow-hidden">
+
+    <!-- luces decorativas -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-brand-salmon/10 rounded-full blur-3xl"></div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl"></div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative overflow-hidden">
+
+    <!-- luces decorativas -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-brand-salmon/10 rounded-full blur-3xl"></div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl"></div>
+
+    <!-- TITULO -->
+    <div class="mb-14 relative z-10">
+
+        <h3 class="text-brand-salmon font-display font-bold text-3xl md:text-4xl tracking-wide drop-shadow-lg">
+            Cómo sería...
+        </h3>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+
+        <!-- COLUMNA 1 -->
+        <div class="flex flex-col space-y-4">
+
+            <div
+                class="bg-brand-dark text-white text-center font-bold text-xs py-4 px-3 uppercase min-h-[5rem] flex items-center justify-center rounded-2xl shadow-xl border border-brand-green/20 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                EL BARRIO (REALIDAD<br>TRANSFORMADA)
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                El Barrio Prado sería percibido como un lugar activo, seguro y cultural, donde las personas entran, recorren y permanecen sin miedo.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Podríamos transformar la percepción negativa del barrio a través de experiencias reales que invitan a habitarlo.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Puede convertirse en un punto de encuentro donde el patrimonio se viva desde el arte, la cultura y la experiencia.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                A través de recorridos organizados, la activación de espacios internos y la conexión entre casas patrimoniales.
+
+            </div>
+
+        </div>
+
+        <!-- COLUMNA 2 -->
+        <div class="flex flex-col space-y-4">
+
+            <div
+                class="bg-brand-dark text-white text-center font-bold text-xs py-4 px-3 uppercase min-h-[5rem] flex items-center justify-center rounded-2xl shadow-xl border border-brand-green/20 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                EL USUARIO<br>(EXPERIENCIA)
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                El usuario viviría el barrio desde adentro, explorando, sintiendo y disfrutando cada espacio del recorrido.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Podríamos guiar al usuario mediante un sistema que le permita descubrir lugares de forma clara y segura.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Puede generar conexión emocional, apropiación del territorio y cambio en la percepción del lugar.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                A través de talleres, espacios culturales y propuestas gastronómicas integradas al recorrido.
+
+            </div>
+
+        </div>
+
+        <!-- COLUMNA 3 -->
+        <div class="flex flex-col space-y-4">
+
+            <div
+                class="bg-brand-dark text-white text-center font-bold text-xs py-4 px-3 uppercase min-h-[5rem] flex items-center justify-center rounded-2xl shadow-xl border border-brand-green/20 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                EL CONCEPTO<br>(HABISORI)
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Habisori sería una experiencia que une habitar y saborear el territorio desde la experiencia.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Podríamos resignificar el concepto de saborear como disfrutar cada momento del recorrido.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Puede transformar la forma en que las personas se relacionan con el patrimonio.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                A través de experiencias sensoriales, culturales y espaciales conectadas con el lugar.
+
+            </div>
+
+        </div>
+
+        <!-- COLUMNA 4 -->
+        <div class="flex flex-col space-y-4">
+
+            <div
+                class="bg-brand-dark text-white text-center font-bold text-xs py-4 px-3 uppercase min-h-[5rem] flex items-center justify-center rounded-2xl shadow-xl border border-brand-green/20 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                EL PRODUCTO<br>(SOLUCIÓN)
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Un sistema físico que guíe la experiencia del usuario dentro del barrio.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Podríamos crear un producto que funcione como guía y recuerdo al mismo tiempo.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Puede facilitar el recorrido y motivar a las personas a visitar el barrio.
+
+            </div>
+
+            <div
+                class="border border-brand-green/30 bg-brand-cream/90 backdrop-blur-sm p-5 text-xs text-gray-700 rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                Mediante mapas, piezas gráficas y elementos interactivos que construyan una experiencia integral.
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TEXTO FINAL -->
+    <div
+        class="mt-14 bg-brand-cream/90 backdrop-blur-sm border border-brand-green/20 rounded-3xl p-8 shadow-2xl relative z-10 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+
+        <p class="text-sm text-gray-700 leading-loose text-justify">
+            Habisori propone habitar el espacio y saborear la experiencia, transformando la percepción del Barrio Prado a través de recorridos que conectan a las personas con su valor cultural y patrimonial.
+        </p>
+
+    </div>
+
+</div>
+           <div class="bg-brand-dark py-20 text-white relative overflow-hidden">
+
+    <!-- luces decorativas -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-brand-salmon/10 rounded-full blur-3xl"></div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- TITULO -->
+        <div class="mb-10">
+
+            <h3 class="text-brand-salmon font-display font-bold text-3xl md:text-4xl tracking-wide drop-shadow-lg">
+                Concepto seleccionado
+            </h3>
+
+        </div>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+
+            <!-- IZQUIERDA -->
+<div
+    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 md:p-7 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col justify-center">
+
+    <div class="mb-5 text-center">
+
+        <p
+            class="uppercase tracking-[0.22em] text-xs text-brand-salmon font-bold mb-3">
+            HABITAR Y SABOREAR
+        </p>
+
+        <div class="w-16 h-[3px] bg-brand-salmon rounded-full mx-auto"></div>
+
+    </div>
+
+    <p class="text-gray-300 text-sm leading-loose text-justify">
+
+        Habitar y Saborear propone reconocer el Barrio Prado Medellín
+        como un territorio que puede volver a recorrerse y habitarse
+        a través de experiencias culturales, artísticas y gastronómicas.
+
+        La idea surge de descubrir aquello que existe detrás de las
+        fachadas del barrio, visibilizando espacios donde la arquitectura
+        patrimonial continúa activa mediante nuevas dinámicas que hoy
+        siguen dándole vida al territorio.
+
+    </p>
+
+</div>
+
+            <!-- DERECHA -->
+            <div
+                class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 md:p-7 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                <div class="mb-5">
+
+                    <p
+                        class="uppercase tracking-[0.22em] text-xs text-brand-salmon font-bold mb-3">
+                        PROPÓSITO
+                    </p>
+
+                    <div class="w-16 h-[3px] bg-brand-salmon rounded-full"></div>
+
+                </div>
+
+                <ul class="space-y-4 text-sm text-gray-300 leading-loose">
+
+                    <li class="border-b border-white/10 pb-3">
+                        Visibilizar espacios culturales, gastronómicos y patrimoniales del barrio.
+                    </li>
+
+                    <li class="border-b border-white/10 pb-3">
+                        Conectar a las personas con la historia y arquitectura de Prado desde la experiencia.
+                    </li>
+
+                    <li class="border-b border-white/10 pb-3">
+                        Transformar la mirada del barrio como un lugar que puede recorrerse, permanecer y habitarse.
+                    </li>
+
+                    <li>
+                        Generar nuevas formas de conexión entre las personas y el territorio a través del arte, la cultura y la gastronomía.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative overflow-hidden">
+
+    <!-- luces decorativas -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-brand-salmon/10 rounded-full blur-3xl"></div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl"></div>
+
+    <!-- TITULO -->
+    <div class="mb-16 relative z-10">
+
+        <h3 class="text-brand-salmon font-display font-bold text-3xl md:text-4xl tracking-wide drop-shadow-lg">
+            Criterios de diseño
+        </h3>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+
+        <!-- CARD 1 -->
+        <div
+            class="bg-brand-cream border border-brand-green/20 rounded-3xl p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+            <h4
+                class="font-bold mb-6 text-brand-dark uppercase tracking-[0.2em] text-sm border-b border-brand-green/20 pb-4">
+                ESTÉTICO-COMUNICATIVO
+            </h4>
+
+            <ul class="space-y-5 text-sm text-gray-700 leading-relaxed">
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Identidad visual:
+                    </span>
+                    Se propone un lenguaje gráfico inspirado en el Art Déco.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Estilo y lenguaje gráfico:
+                    </span>
+                    Uso de ilustración + fotografía intervenida para resignificar los espacios.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Narrativa visual:
+                    </span>
+                    Construir una historia del barrio a través de piezas gráficas.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Comunicación:
+                    </span>
+                    Transmitir el valor del patrimonio de forma clara y accesible.
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+            class="bg-brand-cream border border-brand-green/20 rounded-3xl p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+            <h4
+                class="font-bold mb-6 text-brand-dark uppercase tracking-[0.2em] text-sm border-b border-brand-green/20 pb-4">
+                FUNCIONAL-OPERATIVO
+            </h4>
+
+            <ul class="space-y-5 text-sm text-gray-700 leading-relaxed">
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Jerarquía visual:
+                    </span>
+                    Organización clara de la información para facilitar la lectura.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Legibilidad y accesibilidad:
+                    </span>
+                    Uso adecuado de tipografías y contrastes.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Flujo y navegación:
+                    </span>
+                    Las piezas deben guiar al usuario en el recorrido del barrio.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Interacción:
+                    </span>
+                    Integración de desplegables o códigos QR.
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+            class="bg-brand-cream border border-brand-green/20 rounded-3xl p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+            <h4
+                class="font-bold mb-6 text-brand-dark uppercase tracking-[0.2em] text-sm border-b border-brand-green/20 pb-4">
+                TECNO-PRODUCTIVO
+            </h4>
+
+            <ul class="space-y-5 text-sm text-gray-700 leading-relaxed">
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Soporte, software y formato:
+                    </span>
+                    Desarrollo de piezas físicas y digitales adaptables.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Viabilidad técnica:
+                    </span>
+                    Uso de materiales posibles de producir.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Compatibilidad:
+                    </span>
+                    Adaptación del diseño a diferentes aplicaciones.
+                </li>
+
+                <li>
+                    <span class="font-bold text-brand-dark">
+                        Optimización de recursos:
+                    </span>
+                    Aprovechamiento eficiente de materiales y procesos.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h3 class="text-brand-dark font-display font-bold text-xl md:text-2xl mb-8">
+                    Análisis de referentes y Elementos Visuales
+                </h3>
+
+                <div class="moodboard-wrapper">
+    <div class="moodboard-container">
+        <img src="imgenes/moodboard.png"
+            alt="Moodboard"
+            class="moodboard-full">
+    </div>
+</div>
+            </div>
+     </section>
+
+            <!-- ========================================== -->
+            <!-- PESTAÑA: PROTOTIPAR Y VALIDAR -->
+            <!-- ========================================== -->
+            <section id="prototipar" class="tab-content bg-brand-cream pb-20">
+                <div class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2
+                        class="text-brand-dark font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                        PROTOTIPADO Y<br>VALIDAR
+                    </h2>
+                    <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
+                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                        </svg>
+                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                        </svg>
+                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
+                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                        </svg>
+                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
+                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                        </svg>
+                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
+                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+                        </svg>
+                    </div>
+                </div>
+
+               <div class="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+
+    <!-- encabezado -->
+    <div class="mb-16 max-w-4xl relative">
+
+    <!-- detalle decorativo -->
+    <div class="absolute -left-6 top-2 w-1 h-32 bg-gradient-to-b from-brand-salmon to-transparent rounded-full hidden md:block"></div>
+
+    <!-- etiqueta -->
+    <div class="flex items-center gap-4 mb-5">
+
+        <span class="text-xs uppercase tracking-[0.28em] text-brand-salmon font-semibold">
+            Desarrollo estructural
+        </span>
+
+        <div class="h-px flex-1 bg-gradient-to-r from-brand-salmon/40 to-transparent"></div>
+
+    </div>
+
+    <!-- título -->
+    <h3 class="text-brand-dark font-display font-bold text-4xl md:text-5xl leading-[1.1] mb-6 max-w-3xl">
+        Troquel de caja y empaque de carrusel
+    </h3>
+
+    <!-- descripción -->
+    <p class="text-base text-gray-600 leading-relaxed text-justify max-w-3xl">
+        La caja mide <span class="font-semibold text-brand-dark">32 × 24 cm</span>,
+        con una profundidad de <span class="font-semibold text-brand-dark">8 cm</span>,
+        y fue diseñada para contener una carnada, un librito coleccionable y un carrusel de fotos,
+        además de permitir futuras adiciones dentro del sistema editorial.
+    </p>
+
+</div>
+
+    <!-- layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- medidas caja -->
+        <div class="bg-[#f8f5f1] rounded-[2rem] p-8 border border-[#ece6de] shadow-sm hover:shadow-xl transition duration-500">
+
+            <div class="flex items-center justify-between mb-8">
+
+                <div>
+                    <span class="text-xs uppercase tracking-[0.2em] text-brand-salmon font-semibold">
+                        Medidas generales
+                    </span>
+
+                    <h4 class="text-2xl font-bold text-brand-dark mt-2">
+                        Caja principal
+                    </h4>
+                </div>
+
+                <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm text-xl">
+                    📦
+                </div>
+
+            </div>
+
+            <div class="space-y-5">
+
+                <div class="flex items-center justify-between border-b border-[#ddd6ce] pb-3">
+                    <span class="text-sm text-gray-500 uppercase tracking-wide">
+                        Ancho
+                    </span>
+
+                    <span class="text-2xl font-bold text-brand-dark">
+                        32 cm
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between border-b border-[#ddd6ce] pb-3">
+                    <span class="text-sm text-gray-500 uppercase tracking-wide">
+                        Alto
+                    </span>
+
+                    <span class="text-2xl font-bold text-brand-dark">
+                        24 cm
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-500 uppercase tracking-wide">
+                        Profundidad
+                    </span>
+
+                    <span class="text-2xl font-bold text-brand-dark">
+                        8 cm
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- librito -->
+        <div class="bg-brand-dark rounded-[2rem] p-8 text-white relative overflow-hidden hover:-translate-y-1 transition duration-500">
+
+            <!-- glow -->
+            <div class="absolute -top-20 -right-20 w-52 h-52 bg-brand-salmon/10 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10">
+
+                <div class="flex items-center justify-between mb-8">
+
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.2em] text-brand-salmon font-semibold">
+                            Pieza editorial
+                        </span>
+
+                        <h4 class="text-2xl font-bold mt-2">
+                            Librito coleccionable
+                        </h4>
+                    </div>
+
+                    <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center text-xl">
+                        📖
+                    </div>
+
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm mb-6">
+
+                    <span class="text-xs uppercase tracking-[0.2em] text-gray-400">
+                        Formato
+                    </span>
+
+                    <div class="text-4xl font-bold mt-2">
+                        14 × 20
+                    </div>
+
+                    <div class="text-sm text-gray-400 mt-1">
+                        centímetros
+                    </div>
+
+                </div>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Diseñado para integrarse visualmente con el sistema gráfico y complementar la experiencia narrativa del proyecto.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+                <div class="max-w-5xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
+                    <h3 class="text-center font-display font-bold text-3xl md:text-4xl mb-12"
+                        style="color: #2e6f4e;">Troquel: caja y
+                        carrusel
+                    </h3>
+        
+               <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- TROQUELES -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+        <div class="troquel-box">
+            <img src="imgenes/troquel caja habisori final.png"
+                alt="Troquel caja"
+                class="troquel-img">
+        </div>
+
+        <div class="troquel-box">
+            <img src="imgenes/Troquel de empaque.png"
+                alt="Troquel carrusel"
+                class="troquel-img">
+        </div>
+
+    </div>
+
+    <!-- PROTOTIPADO -->
+    <div class="max-w-5xl mx-auto mt-24 px-4 sm:px-6 lg:px-8">
+
+    <!-- TÍTULO -->
+    <h3 class="text-center font-display font-bold text-3xl md:text-4xl mb-12"
+    style="color: #2e6f4e;">
+    Prototipado
+</h3>
+
+    <!-- GRID 2x2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <div class="proto-card">
+            <img src="imgenes/prototipo.jpeg"
+                alt="Corte láser"
+                class="proto-img">
+        </div>
+
+        <div class="proto-card">
+            <img src="imgenes/prototipoc.jpeg"
+                alt="Detalle corte"
+                class="proto-img">
+        </div>
+
+        <div class="proto-card">
+            <img src="imgenes/TROQUEL.jpeg"
+                alt="Pieza madera"
+                class="proto-img">
+        </div>
+
+        <div class="proto-card">
+            <img src="imgenes/rompetrafico.jpeg"
+                alt="Caja final"
+                class="proto-img">
+        </div>
+
+    </div>
+
+</div>
+
+            </section>
+
+    </main>
+
+    <!-- ========================================== -->
+<!-- FOOTER -->
+<!-- ========================================== -->
+
+<footer class="relative overflow-hidden bg-brand-dark text-white pt-24 pb-10 mt-24">
+
+    <!-- glow decorativo -->
+    <div class="absolute top-0 right-0 w-[28rem] h-[28rem] bg-brand-salmon/10 blur-3xl rounded-full"></div>
+
+    <div class="absolute bottom-0 left-0 w-[24rem] h-[24rem] bg-brand-green/10 blur-3xl rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- top -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 pb-16 border-b border-white/10">
+
+            <!-- marca -->
+            <div class="lg:col-span-2">
+
+                <img 
+                    src="imgenes/logoblanco-100.png" 
+                    alt="Habisori Logo"
+                    class="h-16 w-auto mb-6 hover:scale-105 transition duration-500">
+
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-md text-justify">
+                    Un proyecto para resignificar, habitar y saborear el Barrio Prado Medellín a través de experiencias
+                    que integran diseño, arquitectura, cultura y gastronomía.
+                </p>
+
+                <!-- mini frase -->
+                <div class="mt-8 flex items-center gap-3">
+
+                    <div class="w-10 h-px bg-brand-salmon"></div>
+
+                    <span class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                        Diseño editorial & experiencia cultural
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- navegación -->
+            <div>
+
+                <h4 class="font-display font-bold text-brand-salmon uppercase tracking-[0.22em] text-sm mb-7">
+                    Explorar
+                </h4>
+
+                <ul class="space-y-4 text-sm text-gray-300">
+
+                    <li>
+                        <button data-target="inicio"
+                            class="footer-link">
+                            Inicio
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-target="empatizar"
+                            class="footer-link">
+                            Empatizar
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-target="idear"
+                            class="footer-link">
+                            Idear
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-target="definir"
+                            class="footer-link">
+                            Definir
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-target="prototipar"
+                            class="footer-link">
+                            Prototipar
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- contacto -->
+            <div>
+
+                <h4 class="font-display font-bold text-brand-salmon uppercase tracking-[0.22em] text-sm mb-7">
+                    Contacto
+                </h4>
+
+                <div class="space-y-5 text-sm text-gray-300">
+
+                    <div class="flex items-start gap-4">
+
+                        <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center backdrop-blur-sm border border-white/10">
+                            <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">
+                                Correo
+                            </div>
+
+                            <div>hola@habisori.com</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-start gap-4">
+
+                        <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center backdrop-blur-sm border border-white/10">
+                            <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">
+                                Ubicación
+                            </div>
+
+                            <div>Medellín, Colombia</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- bottom -->
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <p class="text-xs text-gray-500 text-center md:text-left">
+                © 2026 Proyecto Habisori. Todos los derechos reservados.
+            </p>
+
+            <p class="text-xs text-gray-500 flex items-center gap-2">
+                Diseñado con
+                <span class="text-brand-salmon text-sm">❤</span>
+                en Medellín
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- JS EXTERNO -->
+    <script src="script.js"></script>
+
+    </body>
+</html>
