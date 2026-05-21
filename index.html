@@ -45,8 +45,8 @@
 <body class="font-body antialiased text-gray-800">
 
     <!-- BARRA DE NAVEGACIÓN -->
-    <nav class="bg-brand-dark w-full z-50 sticky top-0 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="bg-brand-dark w-full z-50 sticky top-0 shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
@@ -285,118 +285,212 @@
             </h3>
 
         </div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-14">
 
-        <!-- CONTENIDO -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-14">
+    <!-- IZQUIERDA -->
+    <div class="lg:col-span-7">
 
-            <!-- IZQUIERDA -->
-            <div class="lg:col-span-7">
+        <!-- ENCABEZADOS DESKTOP -->
+        <div class="hidden md:grid grid-cols-2 gap-6 mb-6">
 
-                <!-- ENCABEZADOS -->
-                <div class="hidden md:grid grid-cols-2 gap-6 mb-6">
+            <div
+                class="text-center text-brand-salmon font-bold uppercase text-sm tracking-[0.2em]">
+                Problemas
+            </div>
 
-                    <div class="text-center text-brand-salmon font-bold uppercase text-sm tracking-widest">
-                        Problemas
-                    </div>
+            <div
+                class="text-center text-brand-green font-bold uppercase text-sm tracking-[0.2em]">
+                Oportunidades
+            </div>
 
-                    <div class="text-center text-brand-salmon font-bold uppercase text-sm tracking-widest">
-                        Oportunidades
-                    </div>
+        </div>
 
-                </div>
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                <!-- GRID -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- PROBLEMA -->
+            <div
+                class="border border-brand-salmon/30 bg-brand-salmon/10 backdrop-blur-sm p-6 rounded-3xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/70">
 
-                    <!-- FILA 1 -->
-                    <div
-                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
+                <!-- etiqueta mobile -->
+                <div class="md:hidden mb-4">
 
-                        <span class="font-bold text-white text-base">
-                            percepción de inseguridad
-                        </span>
+                    <span
+                        class="inline-flex items-center gap-2 bg-brand-salmon/20 text-brand-salmon text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
 
-                    </div>
+                        ⚠ Problema
 
-                    <div
-                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
-
-                        <p class="text-sm text-gray-300 leading-relaxed">
-                            Transformar la percepción del Barrio Prado a través
-                            de experiencias inmersivas que integren arquitectura,
-                            cultura y gastronomía, incentivando su visita y
-                            reactivación urbana.
-                        </p>
-
-                    </div>
-
-                    <!-- FILA 2 -->
-                    <div
-                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
-
-                        <span class="font-bold text-white text-base">
-                            Alto costo de adecuación
-                        </span>
-
-                    </div>
-
-                    <div
-                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
-
-                        <p class="text-sm text-gray-300 leading-relaxed">
-                            Reactivar casas patrimoniales del Barrio Prado
-                            mediante su transformación en espacios habitados
-                            que integren gastronomía, cultura y arquitectura.
-                        </p>
-
-                    </div>
-
-                    <!-- FILA 3 -->
-                    <div
-                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
-
-                        <span class="font-bold text-white text-base">
-                            Riesgo de gentrificación
-                        </span>
-
-                    </div>
-
-                    <div
-                        class="border border-brand-green/70 bg-white/5 backdrop-blur-sm p-6 rounded-2xl flex items-center shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/80">
-
-                        <p class="text-sm text-gray-300 leading-relaxed">
-                            Dinamizar el Barrio Prado mediante eventos
-                            temporales que integren cultura, gastronomía
-                            y arquitectura.
-                        </p>
-
-                    </div>
-
-                    <!-- FILA DESTACADA -->
-                    <div
-                        class="bg-brand-salmon border border-brand-salmon p-6 rounded-2xl flex items-center shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
-
-                        <span class="font-bold text-white text-base">
-                            Poco interés en el barrio
-                        </span>
-
-                    </div>
-
-                    <div
-                        class="bg-brand-salmon border border-brand-salmon p-6 rounded-2xl flex items-center shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
-
-                        <p class="text-sm text-white/95 leading-relaxed">
-                            Visibilizar y resignificar el Barrio Prado a través
-                            de un producto editorial que integre arquitectura,
-                            cultura y gastronomía desde una narrativa visual
-                            y experiencial.
-                        </p>
-
-                    </div>
+                    </span>
 
                 </div>
+
+                <span class="font-bold text-white text-base md:text-lg leading-snug">
+                    percepción de inseguridad
+                </span>
 
             </div>
+
+            <!-- OPORTUNIDAD -->
+            <div
+                class="border border-brand-green/30 bg-brand-green/10 backdrop-blur-sm p-6 rounded-3xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-green/70">
+
+                <!-- etiqueta mobile -->
+                <div class="md:hidden mb-4">
+
+                    <span
+                        class="inline-flex items-center gap-2 bg-brand-green/20 text-brand-green text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
+
+                        ✨ Oportunidad
+
+                    </span>
+
+                </div>
+
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                    Transformar la percepción del Barrio Prado a través
+                    de experiencias inmersivas que integren arquitectura,
+                    cultura y gastronomía, incentivando su visita y
+                    reactivación urbana.
+                </p>
+
+            </div>
+
+            <!-- PROBLEMA -->
+            <div
+                class="border border-brand-salmon/30 bg-brand-salmon/10 backdrop-blur-sm p-6 rounded-3xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/70">
+
+                <div class="md:hidden mb-4">
+
+                    <span
+                        class="inline-flex items-center gap-2 bg-brand-salmon/20 text-brand-salmon text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
+
+                        ⚠ Problema
+
+                    </span>
+
+                </div>
+
+                <span class="font-bold text-white text-base md:text-lg leading-snug">
+                    Alto costo de adecuación
+                </span>
+
+            </div>
+
+            <!-- OPORTUNIDAD -->
+            <div
+                class="border border-brand-green/30 bg-brand-green/10 backdrop-blur-sm p-6 rounded-3xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-green/70">
+
+                <div class="md:hidden mb-4">
+
+                    <span
+                        class="inline-flex items-center gap-2 bg-brand-green/20 text-brand-green text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
+
+                        ✨ Oportunidad
+
+                    </span>
+
+                </div>
+
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                    Reactivar casas patrimoniales del Barrio Prado
+                    mediante su transformación en espacios habitados
+                    que integren gastronomía, cultura y arquitectura.
+                </p>
+
+            </div>
+
+            <!-- PROBLEMA -->
+            <div
+                class="border border-brand-salmon/30 bg-brand-salmon/10 backdrop-blur-sm p-6 rounded-3xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-salmon/70">
+
+                <div class="md:hidden mb-4">
+
+                    <span
+                        class="inline-flex items-center gap-2 bg-brand-salmon/20 text-brand-salmon text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
+
+                        ⚠ Problema
+
+                    </span>
+
+                </div>
+
+                <span class="font-bold text-white text-base md:text-lg leading-snug">
+                    Riesgo de gentrificación
+                </span>
+
+            </div>
+
+            <!-- OPORTUNIDAD -->
+            <div
+                class="border border-brand-green/30 bg-brand-green/10 backdrop-blur-sm p-6 rounded-3xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-green/70">
+
+                <div class="md:hidden mb-4">
+
+                    <span
+                        class="inline-flex items-center gap-2 bg-brand-green/20 text-brand-green text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
+
+                        ✨ Oportunidad
+
+                    </span>
+
+                </div>
+
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                    Dinamizar el Barrio Prado mediante eventos
+                    temporales que integren cultura, gastronomía
+                    y arquitectura.
+                </p>
+
+            </div>
+
+            <!-- DESTACADO -->
+            <div
+                class="bg-brand-salmon p-6 rounded-3xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]">
+
+                <div class="md:hidden mb-4">
+
+                    <span
+                        class="inline-flex items-center gap-2 bg-white/20 text-white text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
+
+                        ⚠ Problema principal
+
+                    </span>
+
+                </div>
+
+                <span class="font-bold text-white text-base md:text-lg leading-snug">
+                    Poco interés en el barrio
+                </span>
+
+            </div>
+
+            <!-- DESTACADO -->
+            <div
+                class="bg-brand-green p-6 rounded-3xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]">
+
+                <div class="md:hidden mb-4">
+
+                    <span
+                        class="inline-flex items-center gap-2 bg-white/20 text-white text-[10px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full">
+
+                        ✨ Oportunidad principal
+
+                    </span>
+
+                </div>
+
+                <p class="text-sm md:text-base text-white/90 leading-relaxed">
+                    Visibilizar y resignificar el Barrio Prado a través
+                    de un producto editorial que integre arquitectura,
+                    cultura y gastronomía desde una narrativa visual
+                    y experiencial.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
             <!-- DERECHA -->
             <div
@@ -1837,35 +1931,35 @@
 
                     <li>
                         <button data-target="inicio"
-                            class="footer-link">
+                            class="footer-link nav-btn-footer">
                             Inicio
                         </button>
                     </li>
 
                     <li>
                         <button data-target="empatizar"
-                            class="footer-link">
+                            class="footer-link nav-btn-footer">
                             Empatizar
                         </button>
                     </li>
 
                     <li>
                         <button data-target="idear"
-                            class="footer-link">
+                            class="footer-link nav-btn-footer">
                             Idear
                         </button>
                     </li>
 
                     <li>
                         <button data-target="definir"
-                            class="footer-link">
+                            class="footer-link nav-btn-footer">
                             Definir
                         </button>
                     </li>
 
                     <li>
                         <button data-target="prototipar"
-                            class="footer-link">
+                            class="footer-link nav-btn-footer">
                             Prototipar
                         </button>
                     </li>
@@ -1901,7 +1995,7 @@
                                 Correo
                             </div>
 
-                            <div>hola@habisori.com</div>
+                            <div>grupohabisori@habisori.com</div>
                         </div>
 
                     </div>
