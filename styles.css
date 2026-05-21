@@ -9,11 +9,18 @@ html {
 body {
     background: #f4f1eb;
     color: #2d2d2d;
-    display: flex;
-    flex-direction: column;
+
     min-height: 100vh;
+
     overflow-x: hidden;
+
     font-family: 'Inter', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    max-width: 100%;
 }
 
 main {
@@ -669,7 +676,7 @@ header::after {
     content: "";
     position: absolute;
     left: 30px;
-    bottom: 590px;
+    bottom: -18px;
     width: 90px;
     height: 4px;
     border-radius: 999px;
@@ -974,4 +981,39 @@ footer *{
     }
     
 
+}
+
+/* =========================================
+   FIX PARA GOOGLE SITES / IFRAMES
+========================================= */
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+section,
+header,
+main,
+footer{
+    width:100%;
+    max-width:100%;
+}
+
+/* evita desbordamientos */
+.container,
+.wrapper,
+.content{
+    max-width:100%;
 }
