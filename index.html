@@ -65,8 +65,104 @@
                         class="nav-btn text-white hover:text-brand-salmon font-display font-bold text-sm tracking-wide transition-colors">IDEAR</button>
                     <button data-target="prototipar"
                         class="nav-btn text-white hover:text-brand-salmon font-display font-bold text-sm tracking-wide transition-colors">PROTOTIPAR</button>
-                    <button
-                        class="bg-brand-green text-white px-5 py-2 rounded font-display font-bold text-sm tracking-wide hover:bg-opacity-90 transition-all shadow-md">ENLACES</button>
+                    <div class="relative inline-block group">
+
+    <!-- BOTÓN -->
+    <button
+        class="bg-brand-green text-white px-6 py-3 rounded-full font-display font-bold text-sm tracking-[0.18em] uppercase shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-brand-dark border border-white/10">
+
+        Enlaces
+
+    </button>
+
+    <!-- PANEL -->
+    <div
+        class="absolute right-0 top-full mt-5 w-72 bg-[#f8f4ef] rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.25)] border border-[#d8c3ad] overflow-hidden opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-500 z-50">
+
+        <!-- ENCABEZADO -->
+        <div class="px-6 pt-6 pb-4 border-b border-[#d8c3ad]">
+
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#a16b3f] font-semibold mb-2">
+                Recursos del proyecto
+            </p>
+
+            <h4 class="text-brand-dark font-display font-bold text-xl">
+                Documentación
+            </h4>
+
+        </div>
+
+        <!-- LINKS -->
+        <div class="p-3">
+
+            <a href="LINK-1"
+                target="_blank"
+                class="group/item flex items-center justify-between px-4 py-4 rounded-2xl hover:bg-white transition-all duration-300">
+
+                <div>
+                    <p class="text-sm font-semibold text-brand-dark">
+                        Manual de marca
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                        Sistema visual e identidad
+                    </p>
+                </div>
+
+                <span
+                    class="text-brand-salmon text-lg transition-transform duration-300 group-hover/item:translate-x-1">
+                    ↗
+                </span>
+
+            </a>
+
+            <a href="LINK-2"
+                target="_blank"
+                class="group/item flex items-center justify-between px-4 py-4 rounded-2xl hover:bg-white transition-all duration-300">
+
+                <div>
+                    <p class="text-sm font-semibold text-brand-dark">
+                        Panel síntesis
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                        Hallazgos y conceptos
+                    </p>
+                </div>
+
+                <span
+                    class="text-brand-salmon text-lg transition-transform duration-300 group-hover/item:translate-x-1">
+                    ↗
+                </span>
+
+            </a>
+
+            <a href="LINK-3"
+                target="_blank"
+                class="group/item flex items-center justify-between px-4 py-4 rounded-2xl hover:bg-white transition-all duration-300">
+
+                <div>
+                    <p class="text-sm font-semibold text-brand-dark">
+                        Investigación PDF
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                        Desarrollo del proyecto
+                    </p>
+                </div>
+
+                <span
+                    class="text-brand-salmon text-lg transition-transform duration-300 group-hover/item:translate-x-1">
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
                 </div>
                 <!-- Botón de menú móvil -->
                 <div class="md:hidden flex items-center">
@@ -199,26 +295,37 @@
         <!-- ========================================== -->
         <section id="empatizar" class="tab-content bg-brand-cream pb-12">
             <div class="pt-16 max-w-7xl mx-auto px-4 text-center">
-                <h2 class="text-brand-dark font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                <h2 class="text-brand-dark font-display font-black text-5xl md:text-6xl tracking-widest uppercase mb-8">
                     EMPATIZAR
                 </h2>
-                <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                </div>
+                <div class="flex justify-center items-center gap-3 md:gap-6 opacity-70 mb-20">
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="65" height="30" viewBox="0 0 40 20"
+        class="fill-brand-dark transform rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+</div>
                 <div class="text-left max-w-6xl mx-auto py-16 px-6">
 
     <!-- TITULO -->
@@ -490,7 +597,7 @@
 
         </div>
 
-    </div>
+    </div> 
 
             <!-- DERECHA -->
             <div
@@ -730,26 +837,37 @@
         <section id="idear" class="tab-content bg-brand-cream pb-12">
             <div class="pt-20 max-w-7xl mx-auto px-4 text-center">
                 <h2
-                    class="text-brand-terracotta font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                    class="text-brand-dark font-display font-black text-5xl md:text-6xl tracking-widest uppercase mb-8">
                     IDEAR
                 </h2>
-                <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                </div>
+                <div class="flex justify-center items-center gap-3 md:gap-6 opacity-70 mb-20">
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="65" height="30" viewBox="0 0 40 20"
+        class="fill-brand-dark transform rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+</div>
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -1080,26 +1198,37 @@
         <section id="definir" class="tab-content bg-brand-cream pb-12">
             <div class="pt-20 max-w-7xl mx-auto px-4 text-center">
                 <h2
-                    class="text-brand-salmon font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                    class="text-brand-salmon font-display font-black text-5xl md:text-6xl tracking-widest uppercase mb-8">
                     DEFINIR
                 </h2>
-                <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                    <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                    </svg>
-                </div>
+                <div class="flex justify-center items-center gap-3 md:gap-6 opacity-70 mb-20">
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="65" height="30" viewBox="0 0 40 20"
+        class="fill-brand-salmon transform rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+</div>
             </div>
 
             <div class="bg-brand-green py-16 text-white">
@@ -1556,14 +1685,14 @@
                     <span class="font-bold text-brand-dark">
                         Flujo y navegación:
                     </span>
-                    Las piezas deben guiar al usuario en el recorrido del barrio.
+                    Las piezas (caja pop up, carrusel y libro.) deben guiar al usuario en el recorrido del barrio de forma intuitiva.
                 </li>
 
                 <li>
                     <span class="font-bold text-brand-dark">
                         Interacción:
                     </span>
-                    Integración de desplegables o códigos QR.
+                    Interacción basada en el recorrido, la exploración y el descubrimiento de distintos espacios del Barrio Prado Medellín mediante piezas gráficas, elementos editoriales y códigos QR que permitan acceder a la página web y a los diferentes contenidos investigativos y visuales del proyecto.
                 </li>
 
             </ul>
@@ -1592,7 +1721,7 @@
                     <span class="font-bold text-brand-dark">
                         Viabilidad técnica:
                     </span>
-                    Uso de materiales posibles de producir.
+                    Uso de materiales accesibles y funcionales como MDF, cartón corrugado, cartón industrial y papel adhesivo, permitiendo desarrollar piezas viables, resistentes y adaptables para su producción.
                 </li>
 
                 <li>
@@ -1640,26 +1769,37 @@
             <section id="prototipar" class="tab-content bg-brand-cream pb-20">
                 <div class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2
-                        class="text-brand-dark font-display font-black text-4xl md:text-5xl tracking-widest uppercase mb-8">
+                        class="text-brand-terracotta font-display font-black text-5xl md:text-6xl tracking-widest uppercase mb-8">
                         PROTOTIPADO Y<br>VALIDAR
                     </h2>
-                    <div class="flex justify-center items-center space-x-6 md:space-x-12 opacity-80 mb-16">
-                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                        </svg>
-                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                        </svg>
-                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform rotate-12">
-                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                        </svg>
-                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf">
-                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                        </svg>
-                        <svg width="40" height="20" viewBox="0 0 40 20" class="fill-brand-leaf transform -rotate-12">
-                            <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
-                        </svg>
-                    </div>
+                    <div class="flex justify-center items-center gap-3 md:gap-6 opacity-70 mb-20">
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="65" height="30" viewBox="0 0 40 20"
+        class="fill-brand-terracotta transform rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+    <svg width="55" height="26" viewBox="0 0 40 20"
+        class="fill-brand-leaf transform -rotate-12 transition-transform duration-500 hover:scale-110">
+        <path d="M0,20 Q10,0 20,20 Q30,0 40,20 Z" />
+    </svg>
+
+</div>
                 </div>
 
                <div class="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
