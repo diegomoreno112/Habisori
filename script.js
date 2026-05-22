@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ── TABS ──────────────────────────────────────────────────
   const tabs = document.querySelectorAll(".tab-content");
   const navBtns = document.querySelectorAll(".nav-btn");
   const navBtnsMobile = document.querySelectorAll(".nav-btn-mobile");
@@ -63,18 +65,43 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.classList.toggle("hidden");
   });
 
+  // ── SCROLL REVEAL ─────────────────────────────────────────
   const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
     reveals.forEach(reveal => {
-
-        const top = reveal.getBoundingClientRect().top;
-        const visible = 150;
-
-        if(top < window.innerHeight - visible){
-            reveal.classList.add('active');
-        }
-
+      const top = reveal.getBoundingClientRect().top;
+      if (top < window.innerHeight - 150) {
+        reveal.classList.add('active');
+      }
     });
-});
+  });
+
+  // ── DROPDOWN ENLACES ──────────────────────────────────────
+  const btnDesktop  = document.getElementById('btn-enlaces-desktop');
+  const menuDesktop = document.getElementById('menu-enlaces-desktop');
+  const btnMobile   = document.getElementById('btn-enlaces-mobile');
+  const menuMobile  = document.getElementById('menu-enlaces-mobile');
+  const arrowMobile = document.getElementById('arrow-enlaces-mobile');
+
+  if (btnDesktop && menuDesktop) {
+    btnDesktop.addEventListener('click', function (e) {
+      e.stopPropagation();
+      menuDesktop.classList.toggle('hidden');
+    });
+  }
+
+  if (btnMobile && menuMobile) {
+    btnMobile.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var abierto = menuMobile.classList.toggle('hidden');
+      if (arrowMobile) arrowMobile.style.transform = abierto ? '' : 'rotate(180deg)';
+    });
+  }
+
+  document.addEventListener('click', function () {
+    if (menuDesktop) menuDesktop.classList.add('hidden');
+    if (menuMobile)  menuMobile.classList.add('hidden');
+    if (arrowMobile) arrowMobile.style.transform = '';
+  });
+
 });

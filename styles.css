@@ -879,7 +879,6 @@ mark.highlight {
 
 section {
     position: relative;
-    overflow: hidden;
 }
 
 section::before {
