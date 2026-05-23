@@ -436,47 +436,23 @@ header::after {
     opacity: 1;
 }
 
-.collage-img{
-    width: 100%;
-    object-fit: cover;
-
-    border-radius: 18px;
-
-    /* SOLO borde verde fino */
-    border: 2px solid #8ea896;
-
-    /* sombra elegante */
-    box-shadow:
-        0 10px 22px rgba(27, 56, 52, 0.14);
-
-    /* efecto visual */
-    filter: grayscale(10%) brightness(0.99);
-
-    transition:
-        transform .45s ease,
-        box-shadow .45s ease,
-        filter .45s ease,
-        border-color .45s ease;
-
-    cursor: pointer;
-
-    display: block;
+.collage-card {
+    background: #f8f7f4;
+    border: 2px solid #2e6f4e;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform .4s ease, box-shadow .4s ease;
 }
-
-/* hover */
-.collage-img:hover{
-    transform:
-        scale(1.025)
-        translateY(-4px);
-
-    filter:
-        grayscale(0%)
-        brightness(1.02);
-
-    border-color: #2e6f4e;
-
-    box-shadow:
-        0 16px 30px rgba(46, 111, 78, 0.20);
+.collage-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(27,56,52,.10);
+}
+.collage-img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    display: block;
 }
 
 /* CONTENEDOR TROQUELES */
