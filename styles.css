@@ -510,7 +510,7 @@ header::after {
 /* IMAGEN */
 .proto-img{
     width: 100%;
-    height: 420px;
+    height: 340px;
     object-fit: cover;
     border-radius: 1.5rem;
 }
