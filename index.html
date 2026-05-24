@@ -81,7 +81,7 @@
                             <h4 class="text-brand-dark font-display font-bold text-xl">Documentación</h4>
                         </div>
                         <div class="p-3">
-                            <a href="LINK-1" target="_blank"
+                            <a href="https://drive.google.com/file/d/1eMECNFD-zb-YX1kt5t64_G52FGuoQDE1/view?usp=drive_link" target="_blank"
                                 class="flex items-center justify-between px-4 py-4 rounded-2xl hover:bg-white transition-all duration-300">
                                 <div>
                                     <p class="text-sm font-semibold text-brand-dark">Manual de marca</p>
@@ -89,15 +89,15 @@
                                 </div>
                                 <span class="text-brand-salmon text-lg">↗</span>
                             </a>
-                            <a href="LINK-2" target="_blank"
+                            <a href="https://drive.google.com/file/d/10d5nYvl-U5ymgMldlOUHQ117ex-nthpB/view?usp=sharing" target="_blank"
                                 class="flex items-center justify-between px-4 py-4 rounded-2xl hover:bg-white transition-all duration-300">
                                 <div>
-                                    <p class="text-sm font-semibold text-brand-dark">Panel síntesis</p>
-                                    <p class="text-xs text-gray-500 mt-1">Hallazgos y conceptos</p>
+                                    <p class="text-sm font-semibold text-brand-dark">Librito patrimonial</p>
+                                    <p class="text-xs text-gray-500 mt-1">Historia y esencia de Prado</p>
                                 </div>
                                 <span class="text-brand-salmon text-lg">↗</span>
                             </a>
-                            <a href="LINK-3" target="_blank"
+                            <a href="https://drive.google.com/file/d/1GTbzpAV7ZncXsa_YZxcycWJK9k92VS1h/view?usp=sharing" target="_blank"
                                 class="flex items-center justify-between px-4 py-4 rounded-2xl hover:bg-white transition-all duration-300">
                                 <div>
                                     <p class="text-sm font-semibold text-brand-dark">Investigación PDF</p>
@@ -1964,7 +1964,7 @@ PROTOTIPADO Y<br>VALIDAR
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         <div class="troquel-box">
-            <img src="imgenes/troquel caja habisori final.png"
+            <img src="imgenes/troquel 2.jpg"
                 alt="Troquel caja"
                 class="troquel-img">
         </div>
@@ -1987,46 +1987,119 @@ PROTOTIPADO Y<br>VALIDAR
 </h3>
 
     <!-- GRID 2x2 -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- SWIPER CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!-- CARRUSEL -->
+<div class="swiper protoSwiper mt-8">
+
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
             <div class="proto-card">
-            <img src="imgenes/prototipo.jpeg"
-                alt="Corte láser"
-                class="proto-img">
+                <img src="imgenes/prototipo.jpeg"
+                    alt="Corte láser"
+                    class="proto-img">
+            </div>
         </div>
 
-        <div class="proto-card">
-            <img src="imgenes/prototipo1.jpeg"
-                alt="Detalle corte"
-                class="proto-img">
+        <div class="swiper-slide">
+            <div class="proto-card">
+                <img src="imgenes/prototipo1.jpeg"
+                    alt="Detalle corte"
+                    class="proto-img">
+            </div>
         </div>
 
-        <div class="proto-card">
-            <img src="imgenes/TROQUEL.jpeg"
-                alt="Pieza madera"
-                class="proto-img">
+        <div class="swiper-slide">
+            <div class="proto-card">
+                <img src="imgenes/TROQUEL.jpeg"
+                    alt="Pieza madera"
+                    class="proto-img">
+            </div>
         </div>
 
-        <div class="proto-card">
-            <img src="imgenes/rompetrafico.jpeg"
-                alt="Caja final"
-                class="proto-img">
+        <div class="swiper-slide">
+            <div class="proto-card">
+                <img src="imgenes/rompetrafico.jpeg"
+                    alt="Caja final"
+                    class="proto-img">
+            </div>
         </div>
 
-        <div class="proto-card">
-            <img src="imgenes/prototipo2.jpeg"
-                alt="empaque prototipo"
-                class="proto-img">
+        <div class="swiper-slide">
+            <div class="proto-card">
+                <img src="imgenes/prototipo4.jpeg"
+                    alt="Detalle corte"
+                    class="proto-img">
+            </div>
         </div>
 
-        <div class="proto-card">
-            <img src="imgenes/prototipo3.jpeg"
-                alt="hablador prototipo"
-                class="proto-img">
+        <div class="swiper-slide">
+            <div class="proto-card">
+                <img src="imgenes/prototipo6.jpeg"
+                    alt="Detalle corte"
+                    class="proto-img">
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="proto-card">
+                <img src="imgenes/prototipo5.jpeg"
+                    alt="Detalle corte"
+                    class="proto-img">
+            </div>
         </div>
 
     </div>
 
-    <!-- VALIDACIÓN -->
+    <!-- Flechas -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Puntos -->
+    <div class="swiper-pagination"></div>
+
+</div>
+
+<!-- SWIPER JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+const swiper = new Swiper(".protoSwiper", {
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 24,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1.1,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        1024: {
+            slidesPerView: 3,
+        }
+    }
+});
+</script>
+<!-- VALIDACIÓN -->
 <div class="max-w-6xl mx-auto mt-28 px-4 sm:px-6 lg:px-8">
 
     <!-- ENCABEZADO -->
@@ -2039,33 +2112,24 @@ PROTOTIPADO Y<br>VALIDAR
         </h3>
     </div>
 
-    <!-- GRID -->
+    <!-- GRID TARJETAS -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
 
         <!-- TARJETA 1 — verde claro -->
         <div class="md:col-span-2 relative overflow-hidden rounded-[1.5rem] border border-brand-leaf/60 p-6 flex flex-col gap-3" style="background:#eef4f0;">
-
             <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand-green to-brand-leaf rounded-t-[1.5rem]"></div>
             <div class="absolute top-[-20px] right-[-20px] w-24 h-24 rounded-full bg-brand-green opacity-10"></div>
             <span class="absolute bottom-3 right-5 text-[3.5rem] font-black opacity-[0.08] text-brand-dark leading-none select-none">01</span>
-
-            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#2e6f4e22;">
-                🛠️
-            </div>
-
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#2e6f4e22;">🛠️</div>
             <div class="flex items-center gap-2">
-                <span class="text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:#2e6f4e22; color:#1b3834;">
-                    Pruebas
-                </span>
+                <span class="text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:#2e6f4e22; color:#1b3834;">Pruebas</span>
                 <span class="flex gap-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-green opacity-70"></span>
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-green opacity-40"></span>
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-green opacity-20"></span>
                 </span>
             </div>
-
             <h4 class="font-bold text-brand-dark text-sm">Impresión, armado y producción</h4>
-
             <p class="text-brand-dark/80 text-sm leading-relaxed">
                 Durante la fase de validación se realizaron pruebas de impresión,
                 armado y producción de las diferentes piezas desarrolladas dentro
@@ -2076,21 +2140,12 @@ PROTOTIPADO Y<br>VALIDAR
 
         <!-- TARJETA 2 — salmón -->
         <div class="relative overflow-hidden rounded-[1.5rem] border border-brand-salmon/40 p-6 flex flex-col gap-3" style="background:#fdf0ec;">
-
             <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand-salmon to-brand-terracotta rounded-t-[1.5rem]"></div>
             <div class="absolute top-[-20px] right-[-20px] w-24 h-24 rounded-full bg-brand-salmon opacity-10"></div>
             <span class="absolute bottom-3 right-5 text-[3.5rem] font-black opacity-[0.08] text-brand-dark leading-none select-none">02</span>
-
-            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#de795d22;">
-                ✨
-            </div>
-
-            <span class="text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full w-fit" style="background:#de795d22; color:#7a3520;">
-                Ajustes
-            </span>
-
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#de795d22;">✨</div>
+            <span class="text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full w-fit" style="background:#de795d22; color:#7a3520;">Ajustes</span>
             <h4 class="font-bold text-brand-dark text-sm">Modificaciones en piezas</h4>
-
             <p class="text-brand-dark/80 text-sm leading-relaxed">
                 A partir de estos procesos se realizaron pequeñas modificaciones
                 en piezas como el exhibidor, el carrusel, el librillo y el fanzine,
@@ -2100,21 +2155,12 @@ PROTOTIPADO Y<br>VALIDAR
 
         <!-- TARJETA 3 — terracota -->
         <div class="relative overflow-hidden rounded-[1.5rem] border border-brand-terracotta/40 p-6 flex flex-col gap-3" style="background:#f7efe7;">
-
             <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand-terracotta to-brand-salmon rounded-t-[1.5rem]"></div>
             <div class="absolute top-[-20px] right-[-20px] w-24 h-24 rounded-full bg-brand-terracotta opacity-10"></div>
             <span class="absolute bottom-3 right-5 text-[3.5rem] font-black opacity-[0.08] text-brand-dark leading-none select-none">03</span>
-
-            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#a16b3f22;">
-                🎨
-            </div>
-
-            <span class="text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full w-fit" style="background:#a16b3f22; color:#5a3a1a;">
-                Visual
-            </span>
-
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#a16b3f22;">🎨</div>
+            <span class="text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full w-fit" style="background:#a16b3f22; color:#5a3a1a;">Visual</span>
             <h4 class="font-bold text-brand-dark text-sm">Identidad visual</h4>
-
             <p class="text-brand-dark/80 text-sm leading-relaxed">
                 Asimismo, se validaron elementos como color, tipografías,
                 composición gráfica, concepto y navegabilidad, comprobando que
@@ -2126,6 +2172,40 @@ PROTOTIPADO Y<br>VALIDAR
         </div>
 
     </div>
+    <!-- ↑ cierra el grid de tarjetas -->
+
+    <div class="mt-6 space-y-4">
+
+    <!-- Dos verticales -->
+    <div class="grid grid-cols-2 gap-4">
+
+        <div class="bg-white p-3 rounded-[2rem] border border-[#de795d]/40 shadow-sm">
+            <div class="overflow-hidden rounded-[1.5rem]">
+                <img src="imgenes/prototipo2.jpeg"
+                    alt="Prototipo"
+                    class="w-full object-cover hover:scale-105 transition duration-500">
+            </div>
+        </div>
+
+        <div class="bg-white p-3 rounded-[2rem] border border-[#2e6f4e]/30 shadow-sm">
+            <div class="overflow-hidden rounded-[1.5rem]">
+                <img src="imgenes/prototipo3.jpeg"
+                    alt="Empaque"
+                    class="w-full object-cover hover:scale-105 transition duration-500">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Imagen cuadrada -->
+    <div class="max-w-md mx-auto bg-white p-3 rounded-[2rem] border border-[#a16b3f]/30 shadow-sm">
+        <div class="overflow-hidden rounded-[1.5rem]">
+            <img src="imgenes/validacion.jpeg"
+                alt="Validación"
+                class="w-full object-contain hover:scale-105 transition duration-500">
+        </div>
+    </div>
+
 </div>
 </div>
 
