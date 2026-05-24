@@ -2030,8 +2030,8 @@ PROTOTIPADO Y<br>VALIDAR
 <div class="max-w-6xl mx-auto mt-28 px-4 sm:px-6 lg:px-8">
 
     <!-- ENCABEZADO -->
-    <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-[0.3em] text-brand-salmon font-semibold">
+    <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-salmon font-semibold">
             Validación del proyecto
         </span>
         <h3 class="font-display font-black text-4xl md:text-5xl text-brand-dark mt-4">
@@ -2039,69 +2039,93 @@ PROTOTIPADO Y<br>VALIDAR
         </h3>
     </div>
 
-    <!-- CONTENEDOR -->
-    <div class="relative overflow-hidden rounded-[2.8rem] border border-[#e5ddd3] bg-brand-cream shadow-sm">
+    <!-- GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
-        <!-- decoraciones -->
-        <div class="absolute top-0 right-0 w-72 h-72 bg-brand-leaf/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-brand-salmon/10 rounded-full blur-3xl"></div>
+        <!-- TARJETA 1 — ancha -->
+        <div class="sm:col-span-2 relative overflow-hidden bg-white rounded-[1.5rem] border border-brand-leaf/30 p-6 flex items-start gap-4">
 
-        <!-- franja -->
-        <div class="h-3 w-full bg-gradient-to-r from-brand-green via-brand-leaf to-brand-salmon"></div>
+            <div class="absolute top-[-20px] right-[-20px] w-24 h-24 rounded-full bg-brand-green opacity-10"></div>
+            <span class="absolute bottom-3 right-5 text-[3.5rem] font-black opacity-[0.05] text-brand-dark leading-none select-none">01</span>
 
-        <div class="relative z-10 p-6 md:p-12 lg:p-14">
-            <div class="space-y-6 md:space-y-8">
+            <div class="w-11 h-11 rounded-xl bg-brand-green/10 flex items-center justify-center shrink-0">
+                🛠️
+            </div>
 
-                <!-- bloque 1 -->
-                <div class="bg-white/70 backdrop-blur-sm rounded-[2rem] p-5 md:p-8 border border-[#ebe4db]">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-brand-green text-white flex items-center justify-center text-xl sm:text-2xl shrink-0">
-                            🛠️
-                        </div>
-                        <p class="min-w-0 text-gray-700 leading-relaxed text-sm md:text-base">
-                            Durante la fase de validación se realizaron pruebas de impresión,
-                            armado y producción de las diferentes piezas desarrolladas dentro
-                            del proyecto, permitiendo ajustar aspectos relacionados con medidas,
-                            materiales, acabados y presentación visual.
-                        </p>
-                    </div>
+            <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-[10px] font-semibold uppercase tracking-widest bg-brand-green/10 text-brand-green px-2.5 py-1 rounded-full">
+                        Pruebas
+                    </span>
+                    <span class="flex gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green opacity-70"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green opacity-40"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green opacity-20"></span>
+                    </span>
                 </div>
-
-                <!-- bloque 2 -->
-                <div class="bg-white/70 backdrop-blur-sm rounded-[2rem] p-5 md:p-8 border border-[#ebe4db]">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-brand-salmon text-white flex items-center justify-center text-xl sm:text-2xl shrink-0">
-                            ✨
-                        </div>
-                        <p class="min-w-0 text-gray-700 leading-relaxed text-sm md:text-base">
-                            A partir de estos procesos se realizaron pequeñas modificaciones
-                            en piezas como el exhibidor, el carrusel, el librillo y el fanzine,
-                            con el propósito de mejorar su funcionamiento, claridad y coherencia visual.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- bloque 3 -->
-                <div class="bg-white/70 backdrop-blur-sm rounded-[2rem] p-5 md:p-8 border border-[#ebe4db]">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-brand-terracotta text-white flex items-center justify-center text-xl sm:text-2xl shrink-0">
-                            🎨
-                        </div>
-                        <p class="min-w-0 text-gray-700 leading-relaxed text-sm md:text-base">
-                            Asimismo, se validaron elementos como color, tipografías,
-                            composición gráfica, concepto y navegabilidad, comprobando que
-                            la propuesta mantuviera una identidad visual clara y coherente
-                            con la intención de la marca, logrando transmitir una experiencia
-                            cercana alrededor del recorrido, la arquitectura y las nuevas
-                            formas de habitar el Barrio Prado Medellín.
-                        </p>
-                    </div>
-                </div>
-
+                <h4 class="font-bold text-brand-dark text-sm mb-2">Impresión, armado y producción</h4>
+                <div class="w-full h-px bg-brand-leaf/30 mb-3"></div>
+                <p class="text-brand-dark/70 text-sm leading-relaxed">
+                    Durante la fase de validación se realizaron pruebas de impresión,
+                    armado y producción de las diferentes piezas desarrolladas dentro
+                    del proyecto, permitiendo ajustar aspectos relacionados con medidas,
+                    materiales, acabados y presentación visual.
+                </p>
             </div>
         </div>
-    </div>
 
+        <!-- TARJETA 2 -->
+        <div class="relative overflow-hidden bg-white rounded-[1.5rem] border border-brand-leaf/30 p-6 flex flex-col gap-3">
+
+            <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand-salmon to-brand-terracotta rounded-t-[1.5rem]"></div>
+            <div class="absolute top-[-20px] right-[-20px] w-24 h-24 rounded-full bg-brand-salmon opacity-10"></div>
+            <span class="absolute bottom-3 right-5 text-[3.5rem] font-black opacity-[0.05] text-brand-dark leading-none select-none">02</span>
+
+            <div class="w-11 h-11 rounded-xl bg-brand-salmon/10 flex items-center justify-center mt-1">
+                ✨
+            </div>
+
+            <span class="text-[10px] font-semibold uppercase tracking-widest bg-brand-salmon/10 text-brand-salmon px-2.5 py-1 rounded-full w-fit">
+                Ajustes
+            </span>
+
+            <h4 class="font-bold text-brand-dark text-sm">Modificaciones en piezas</h4>
+
+            <p class="text-brand-dark/70 text-sm leading-relaxed">
+                A partir de estos procesos se realizaron pequeñas modificaciones
+                en piezas como el exhibidor, el carrusel, el librillo y el fanzine,
+                con el propósito de mejorar su funcionamiento, claridad y coherencia visual.
+            </p>
+        </div>
+
+        <!-- TARJETA 3 -->
+        <div class="relative overflow-hidden bg-white rounded-[1.5rem] border border-brand-leaf/30 p-6 flex flex-col gap-3">
+
+            <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand-dark to-brand-green rounded-t-[1.5rem]"></div>
+            <div class="absolute top-[-20px] right-[-20px] w-24 h-24 rounded-full bg-brand-terracotta opacity-10"></div>
+            <span class="absolute bottom-3 right-5 text-[3.5rem] font-black opacity-[0.05] text-brand-dark leading-none select-none">03</span>
+
+            <div class="w-11 h-11 rounded-xl bg-brand-terracotta/10 flex items-center justify-center mt-1">
+                🎨
+            </div>
+
+            <span class="text-[10px] font-semibold uppercase tracking-widest bg-brand-terracotta/10 text-brand-terracotta px-2.5 py-1 rounded-full w-fit">
+                Visual
+            </span>
+
+            <h4 class="font-bold text-brand-dark text-sm">Identidad visual</h4>
+
+            <p class="text-brand-dark/70 text-sm leading-relaxed">
+                Asimismo, se validaron elementos como color, tipografías,
+                composición gráfica, concepto y navegabilidad, comprobando que
+                la propuesta mantuviera una identidad visual clara y coherente
+                con la intención de la marca, logrando transmitir una experiencia
+                cercana alrededor del recorrido, la arquitectura y las nuevas
+                formas de habitar el Barrio Prado Medellín.
+            </p>
+        </div>
+
+    </div>
 </div>
 </div>
 
