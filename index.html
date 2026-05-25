@@ -1833,7 +1833,7 @@ PROTOTIPADO Y<br>VALIDAR
     <p class="text-base text-gray-600 leading-relaxed text-justify max-w-3xl">
         La caja mide <span class="font-semibold text-brand-dark">32 × 24 cm</span>,
         con una profundidad de <span class="font-semibold text-brand-dark">8 cm</span>,
-        y fue diseñada para contener una carnada, un librito coleccionable y un carrusel de fotos,
+        y fue diseñada para contener una camiseta, un librito coleccionable y un carrusel de fotos,
         además de permitir futuras adiciones dentro del sistema editorial.
     </p>
 
@@ -1871,7 +1871,7 @@ PROTOTIPADO Y<br>VALIDAR
                     </span>
 
                     <span class="text-2xl font-bold text-brand-dark">
-                        32 cm
+                        29 cm
                     </span>
                 </div>
 
@@ -1881,7 +1881,7 @@ PROTOTIPADO Y<br>VALIDAR
                     </span>
 
                     <span class="text-2xl font-bold text-brand-dark">
-                        24 cm
+                        6,4 cm
                     </span>
                 </div>
 
@@ -1891,7 +1891,7 @@ PROTOTIPADO Y<br>VALIDAR
                     </span>
 
                     <span class="text-2xl font-bold text-brand-dark">
-                        8 cm
+                        20 cm
                     </span>
                 </div>
 
@@ -1932,7 +1932,7 @@ PROTOTIPADO Y<br>VALIDAR
                     </span>
 
                     <div class="text-4xl font-bold mt-2">
-                        14 × 20
+                        12 × 19
                     </div>
 
                     <div class="text-sm text-gray-400 mt-1">
@@ -2179,33 +2179,35 @@ const swiper = new Swiper(".protoSwiper", {
     <div class="mt-6 space-y-4">
 
     <!-- Dos verticales -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        <div class="bg-white p-3 rounded-[2rem] border border-[#de795d]/40 shadow-sm">
-            <div class="overflow-hidden rounded-[1.5rem]">
-                <img src="imgenes/prototipo2.jpeg"
-                    alt="Prototipo"
-                    class="w-full h-[420px] md:h-auto object-cover hover:scale-105 transition duration-500">
-            </div>
+    <div class="bg-white p-3 rounded-[2rem] border border-[#de795d]/40 shadow-sm">
+        <div class="overflow-hidden rounded-[1.5rem]">
+            <img src="imgenes/prototipo2.jpeg"
+                alt="Prototipo"
+                class="w-full aspect-[4/5] md:aspect-auto object-contain hover:scale-105 transition duration-500">
         </div>
-
-        <div class="bg-white p-3 rounded-[2rem] border border-[#2e6f4e]/30 shadow-sm">
-            <div class="overflow-hidden rounded-[1.5rem]">
-                <img src="imgenes/prototipo3.jpeg"
-                    alt="Empaque"
-                    class="w-full h-[420px] md:h-auto object-cover hover:scale-105 transition duration-500">
-            </div>
-        </div>
-
     </div>
 
-    <!-- Imagen cuadrada -->
-    <div class="w-full md:max-w-md mx-auto bg-white p-3 rounded-[2rem] border border-[#a16b3f]/30 shadow-sm">
+    <div class="bg-white p-3 rounded-[2rem] border border-[#2e6f4e]/30 shadow-sm">
         <div class="overflow-hidden rounded-[1.5rem]">
-            <img src="imgenes/validacion.jpeg"
-                alt="Validación"
-                class="w-full h-[300px] md:h-auto object-contain hover:scale-105 transition duration-500">
+            <img src="imgenes/prototipo3.jpeg"
+                alt="Empaque"
+                class="w-full aspect-[4/5] md:aspect-auto object-contain hover:scale-105 transition duration-500">
         </div>
+    </div>
+
+</div>
+
+<!-- Imagen cuadrada -->
+<div class="w-full max-w-[320px] mx-auto bg-white p-3 rounded-[2rem] border border-[#a16b3f]/30 shadow-sm">
+
+    <div class="overflow-hidden rounded-[1.5rem] aspect-square">
+
+        <img src="imgenes/validacion.jpeg"
+            alt="Validación"
+            class="w-full h-full object-cover hover:scale-105 transition duration-500">
+
     </div>
 
 </div>
@@ -2366,20 +2368,27 @@ const swiper = new Swiper(".protoSwiper", {
 
         </div>
 
-        <!-- bottom -->
-        <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+       <!-- bottom -->
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 
-            <p class="text-xs text-gray-500 text-center md:text-left">
-                © 2026 Proyecto Habisori. Todos los derechos reservados.
-            </p>
+    <p class="text-xs text-gray-500 text-center md:text-left">
+        © 2026 Proyecto Habisori. Todos los derechos reservados.
+    </p>
 
-            <p class="text-xs text-gray-500 flex items-center gap-2">
-                Diseñado con
-                <span class="text-brand-salmon text-sm">❤</span>
-                en Medellín
-            </p>
+    <!-- logo Medellín -->
+    <div class="flex items-center justify-center">
+        <img src="imagenes/logo-medellin.png"
+            alt="Logo Medellín"
+            class="h-10 w-auto object-contain">
+    </div>
 
-        </div>
+    <p class="text-xs text-gray-500 flex items-center gap-2">
+        Diseñado con
+        <span class="text-brand-salmon text-sm">❤</span>
+        en Medellín
+    </p>
+
+</div>
 
     </div>
 
